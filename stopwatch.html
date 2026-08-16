@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>30-Day Stopwatch</title>
+</head>
+<body>
+  <h2>⏱ Stopwatch</h2>
+  <p id="timer">00:00:00</p>
+  <button onclick="start()">Start</button>
+  <button onclick="stop()">Stop</button>
+  <button onclick="reset()">Reset</button>
+
+  <script>
+    let timer;
+    let seconds = 0;
+    function update() {
+      seconds++;
+      let hrs = String(Math.floor(seconds / 3600)).padStart(2,'0');
+      let mins = String(Math.floor((seconds % 3600) / 60)).padStart(2,'0');
+      let secs = String(seconds % 60).padStart(2,'0');
+      document.getElementById("timer").innerText = `${hrs}:${mins}:${secs}`;
+    }
+    function start() { if (!timer) timer = setInterval(update, 1000); }
+    function stop() { clearInterval(timer); timer = null; }
+    function reset() { stop(); seconds = 0; document.getElementById("timer").innerText = "00:00:00"; }
+  </script>
+</body>
+</html>
