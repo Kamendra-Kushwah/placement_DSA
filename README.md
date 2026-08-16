@@ -6,8 +6,8 @@ I have practiced and revisited most of these problems.
 ---
 
 ## ⏱ 30-Day DSA Challenge Progress
-
-![Progress](https://progress-bar.dev/10/?scale=30&title=Day&width=300&color=blue)
+[
+(https://kamendra-kushwah.github.io/placement_DSA/stopwatch.html)
 
 - ✅ Day 1  
 - ✅ Day 2  
